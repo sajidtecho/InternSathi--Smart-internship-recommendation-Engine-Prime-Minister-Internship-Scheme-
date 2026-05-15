@@ -51,7 +51,8 @@ pnpm install
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the application.
+Open (https://intern-sathi-smart-internship-recom.vercel.app/) to view the application.
+open [https://intern-sathi-smart-internship-recom.vercel.app/] to vie live app
 
 ## 📂 Project Structure
 
