@@ -1,0 +1,312 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Background Textures */
+.bg-texture-hero {
+  background-color: #7c3aed;
+  background-image: 
+    /* Geometric grid pattern */
+    url('data:image/svg+xml,%3Csvg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Cpath d="M0 0h40v40H0V0zm40 40h40v40H40V40zm40-40h40v40H80V0z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'),
+    /* Diagonal lines pattern */
+    url('data:image/svg+xml,%3Csvg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23a855f7" fill-opacity="0.04"%3E%3Cpath d="M0 0l40 40L0 80V0zm40 0l40 40L40 80V0z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'),
+    /* Hexagon pattern */
+    url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23d946ef" fill-opacity="0.06"%3E%3Cpath d="M30 0l25.98 15v30L30 60 4.02 45V15L30 0zm0 10l-19.32 11.15v21.7L30 54l19.32-11.15v-21.7L30 10z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'),
+    /* Circuit board pattern */
+    url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23f59e0b" fill-opacity="0.08" fill-rule="evenodd"%3E%3Cpath d="M20 20c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm-8 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm16 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zM4 20c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"/%3E%3C/g%3E%3C/svg%3E'),
+    /* Original dot pattern for layering */
+    url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239333ea" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="3"/%3E%3Ccircle cx="0" cy="30" r="2"/%3E%3Ccircle cx="60" cy="30" r="2"/%3E%3Ccircle cx="30" cy="0" r="2"/%3E%3Ccircle cx="30" cy="60" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+  background-position: 
+    0 0,          /* geometric grid */
+    25px 25px,    /* diagonal lines */
+    60px 30px,    /* hexagon */
+    10px 10px,    /* circuit board */
+    0 0;          /* dots */
+  background-size: 
+    120px 120px,  /* geometric grid */
+    80px 80px,    /* diagonal lines */
+    60px 60px,    /* hexagon */
+    40px 40px,    /* circuit board */
+    60px 60px;    /* dots */
+}
+
+.bg-texture-light {
+  background-color: #f8fafc;
+  background-image: 
+    url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%230d47a1" fill-opacity="0.03" fill-rule="evenodd"%3E%3Cpath d="M0 0h20v20H0V0zm10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm20 0a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM10 37a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm10-17h20v20H20V20zm10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14z"/%3E%3C/g%3E%3C/svg%3E'),
+    url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23f97316" fill-opacity="0.02"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+.bg-texture-blue {
+  background-color: #0d47a1;
+  background-image: 
+    url('data:image/svg+xml,%3Csvg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2L78 40h-2z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'),
+    url('data:image/svg+xml,%3Csvg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%236366f1" fill-opacity="0.03"%3E%3Cpolygon points="120 120 60 120 90 90 120 60 120 0 180 0 150 30 120 60"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+.bg-texture-gallery {
+  background-color: #f1f5f9;
+  background-image: 
+    url('data:image/svg+xml,%3Csvg width="52" height="26" viewBox="0 0 52 26" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%2394a3b8" fill-opacity="0.08"%3E%3Cpath d="M10 10c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4 4-1.79 4-4zm32 0c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4 4-1.79 4-4zM20 20c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4 4-1.79 4-4zm32 0c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4 4-1.79 4-4zM6 0c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4 4-1.79 4-4zm20 0c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4 4-1.79 4-4zm20 0c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4 4-1.79 4-4zm0 20c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4 4-1.79 4-4zM28 10c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4 4-1.79 4-4z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'),
+    url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23f97316" fill-opacity="0.03"%3E%3Cpath d="M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243L8.2 0H5.373zM48.97 0l3.657 3.657-1.414 1.414L46.143 0h2.828zM11.03 0L7.372 3.657l1.415 1.414L13.857 0H11.03zM43.284 0l5.657 5.657-1.414 1.414L41.87 0h1.414zM16.716 0L11.059 5.657l1.414 1.414L18.13 0h-1.414zM37.627 0l7.071 7.071-1.414 1.414L35.213 0h2.414zM22.373 0l-7.071 7.071 1.414 1.414L24.787 0h-2.414zM32 0l8.485 8.485-1.414 1.414L30.586 0H32zM27.414 0L19 8.485l1.414 1.414L29.828 0h-2.414z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+.bg-texture-white {
+  background-color: #ffffff;
+  background-image: 
+    url('data:image/svg+xml,%3Csvg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%230d47a1" fill-opacity="0.02"%3E%3Cpath d="M20 20c0-8.837-7.163-16-16-16S-12 11.163-12 20s7.163 16 16 16 16-7.163 16-16zm0 40c0-8.837-7.163-16-16-16S-12 51.163-12 60s7.163 16 16 16 16-7.163 16-16zm40-40c0-8.837-7.163-16-16-16S28 11.163 28 20s7.163 16 16 16 16-7.163 16-16zm0 40c0-8.837-7.163-16-16-16S28 51.163 28 60s7.163 16 16 16 16-7.163 16-16zm40-40c0-8.837-7.163-16-16-16S68 11.163 68 20s7.163 16 16 16 16-7.163 16-16zm0 40c0-8.837-7.163-16-16-16S68 51.163 68 60s7.163 16 16 16 16-7.163 16-16z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'),
+    url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%2306b6d4" fill-opacity="0.03"%3E%3Cpath d="M30 30c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm0-6L10 4l20 20 20-20L30 24z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+.bg-app-section {
+  background-image: url('/images/app%20bg.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.8;
+}
+
+.bg-texture-partners {
+  background-color: #f8fafc;
+  background-image: 
+    url('data:image/svg+xml,%3Csvg width="84" height="48" viewBox="0 0 84 48" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%230f172a" fill-opacity="0.02"%3E%3Cpath d="M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zm14 8h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zm0-8h12v6H14V8zm14 24h12v6H28v-6zm14-8h12v6H42v-6zm28-8h12v6H70v-6zm0 8h12v6H70v-6zm0 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'),
+    url('data:image/svg+xml,%3Csvg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%236366f1" fill-opacity="0.03"%3E%3Ccircle cx="20" cy="20" r="4"/%3E%3Ccircle cx="44" cy="20" r="4"/%3E%3Ccircle cx="0" cy="20" r="4"/%3E%3Ccircle cx="20" cy="0" r="4"/%3E%3Ccircle cx="20" cy="44" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+/* Slide in from left animation */
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.8s ease-out;
+}
+
+/* Horizontal scrolling animations */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 30s linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 30s linear infinite;
+}
+
+.animate-scroll-left-fast {
+  animation: scroll-left 20s linear infinite;
+}
+
+/* Popup animations */
+@keyframes popup-fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes popup-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-popup-fade-in {
+  animation: popup-fade-in 0.4s ease-out;
+}
+
+.animate-popup-slide-in {
+  animation: popup-slide-in 0.3s ease-out;
+}
+
+.animate-scroll-right-fast {
+  animation: scroll-right 20s linear infinite;
+}
+
+:root {
+  /* Updated color tokens to match Indian government blue branding */
+  --background: oklch(1 0 0); /* White background */
+  --foreground: oklch(0.35 0 0); /* Dark gray text */
+  --card: oklch(0.99 0.01 60); /* Light beige card background */
+  --card-foreground: oklch(0.35 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.35 0 0);
+  --primary: oklch(0.43 0.15 255); /* Blue primary color */
+  --primary-foreground: oklch(1 0 0); /* White text on primary */
+  --secondary: oklch(0.5 0.12 250); /* Bright blue secondary */
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.98 0.005 60); /* Very light beige */
+  --muted-foreground: oklch(0.35 0 0);
+  --accent: oklch(0.5 0.12 250); /* Bright blue accent */
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.9 0.005 60); /* Light border */
+  --input: oklch(1 0 0);
+  --ring: oklch(0.43 0.15 255 / 0.5); /* Blue focus ring */
+  --chart-1: oklch(0.5 0.12 250);
+  --chart-2: oklch(0.43 0.15 255);
+  --chart-3: oklch(0.6 0.1 260);
+  --chart-4: oklch(0.7 0.08 265);
+  --chart-5: oklch(0.98 0.005 60);
+  --radius: 0.5rem;
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.35 0 0);
+  --sidebar-primary: oklch(0.43 0.15 255);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.5 0.12 250);
+  --sidebar-accent-foreground: oklch(1 0 0);
+  --sidebar-border: oklch(0.9 0.005 60);
+  --sidebar-ring: oklch(0.43 0.15 255 / 0.5);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.7 0.12 30);
+  --primary-foreground: oklch(0.145 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.7 0.12 30);
+  --accent-foreground: oklch(0.145 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.7 0.12 30 / 0.5);
+  --chart-1: oklch(0.7 0.12 30);
+  --chart-2: oklch(0.65 0.15 35);
+  --chart-3: oklch(0.8 0.1 45);
+  --chart-4: oklch(0.85 0.08 50);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.7 0.12 30);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.7 0.12 30 / 0.5);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  /* Fix hover effects to ensure text remains visible */
+  .hover\:text-orange-300:hover {
+    color: #fed7aa !important; /* Light orange with good contrast */
+  }
+  
+  /* Ensure buttons maintain proper text contrast on hover */
+  button:hover,
+  .hover\:bg-gray-100:hover {
+    color: inherit;
+  }
+  
+  /* Fix specific problematic hover combinations */
+  .text-gray-700.hover\:bg-gray-100:hover {
+    color: #374151 !important; /* Ensure gray text stays visible */
+  }
+  
+  /* Ensure link text remains visible on hover */
+  a:hover {
+    text-decoration: none;
+  }
+  
+  /* Fix navigation hover effects */
+  .hover\:bg-blue-700:hover {
+    background-color: #1d4ed8 !important;
+    color: white !important;
+  }
+}
+
+/* Government footer orange border */
+.border-t-government-orange {
+  border-top-color: #FF9933;
+}
+
