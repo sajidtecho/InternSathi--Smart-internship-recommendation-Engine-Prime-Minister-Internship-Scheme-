@@ -110,7 +110,8 @@ This project is developed for educational purposes as part of SIH 2025.
 
 ## 👥 Team
 
-Developed by Team [Your Team Name] for Smart India Hackathon 2025
+Developed by Team Sajid(Lead), Irfan Bilal, Abhinay, Meher for Smart India Hackathon 2025
+## Second Runner UP
 
 ## 📞 Support
 
